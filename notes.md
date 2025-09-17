@@ -66,3 +66,40 @@ if (!window.Temporal) {
 	window.Temporal = { ... }:
 }
 ```
+
+## Runtimes
+
+Node
+
+- 2009
+- Ryan Dahl
+- I/O context.SaveChanges();
+- kan nu een beetje soort van TypeScript uitvoeren:
+  ```sh
+  node bla.ts --experimental-strip-types
+  ```
+  Doet enkel uitvoeren, geen type checking.
+
+Deno
+
+- 2020
+- ook Ryan Dahl
+- modernere API
+- veiliger
+  ```sh
+  deno run --allow-net --allow-read C:\temp bla.ts
+  ```
+- TypeScript out of the box
+- node_modules
+- import { ... } from 'https://...../stdin@4.1.7/bla.ts';
+  - distributed package management system
+- was niet compatible met npm packages, pas vanaf de grote v2
+
+Bun
+
+- 2021
+- Oven
+- nadeel: Venture Capitalist $$$, wat wordt hun grote commercialisatieslag?
+- performance++
+- TypeScript
+- compatible met npm packages
